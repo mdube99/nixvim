@@ -38,8 +38,6 @@
     #./plug/ui/alpha.nix
     ./plug/ui/btw.nix
     ./plug/ui/bufferline.nix
-    ./plug/ui/noice.nix
-    ./plug/ui/nvim-notify.nix
     ./plug/ui/telescope.nix
     ./plug/ui/scroll.nix
 
