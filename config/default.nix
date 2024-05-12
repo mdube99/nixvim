@@ -12,7 +12,6 @@
     ./plug/colorscheme/colorscheme.nix
 
     ./plug/completion/cmp.nix
-    #./plug/completion/copilot-cmp.nix
     ./plug/completion/lspkind.nix
     ./plug/completion/schemastore.nix
 
@@ -46,7 +45,6 @@
     ./plug/ui/telescope.nix
 
     ./plug/utils/comment.nix
-    ./plug/utils/copilot.nix
     ./plug/utils/flash.nix
     ./plug/utils/hardtime.nix
     #./plug/utils/harpoon.nix
