@@ -31,7 +31,7 @@ in {
       lualine_a = [
         {
           name = "mode";
-          fmt = "string.lower";
+          #fmt = "string.lower";
           color = {
             fg =
               if config.colorschemes.base16.enable

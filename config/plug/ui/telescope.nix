@@ -20,7 +20,7 @@
       };
     };
     keymaps = {
-      "<leader>/" = {
+      "<leader>fw" = {
         action = "live_grep";
         options = {
           desc = "Grep (root dir)";

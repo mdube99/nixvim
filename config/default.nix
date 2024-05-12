@@ -15,9 +15,8 @@
     ./plug/completion/lspkind.nix
     ./plug/completion/schemastore.nix
 
-    ./plug/git/gitlinker.nix
     ./plug/git/gitsigns.nix
-    ./plug/git/lazygit.nix
+    ./plug/git/fugitive.nix
     ./plug/git/worktree.nix
 
     #./plug/lsp/conform.nix
@@ -31,7 +30,6 @@
     ./plug/snippets/luasnip.nix
 
     ./plug/statusline/lualine.nix
-    #./plug/statusline/staline.nix
 
     #./plug/treesitter/treesitter-context.nix
     ./plug/treesitter/treesitter-textobjects.nix
@@ -43,12 +41,9 @@
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
     ./plug/ui/telescope.nix
+    ./plug/ui/scroll.nix
 
     ./plug/utils/comment.nix
-    ./plug/utils/flash.nix
-    ./plug/utils/hardtime.nix
-    #./plug/utils/harpoon.nix
-    ./plug/utils/grapple.nix
     ./plug/utils/illuminate.nix
     ./plug/utils/nvim-autopairs.nix
     ./plug/utils/oil.nix
@@ -56,6 +51,8 @@
     ./plug/utils/undotree.nix
     ./plug/utils/ufo.nix
     ./plug/utils/whichkey.nix
+    ./plug/utils/toggleterm.nix
+    ./plug/utils/tmux.nix
   ];
   options = {
     theme = lib.mkOption {

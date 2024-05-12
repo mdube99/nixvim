@@ -241,24 +241,6 @@
 
     {
       mode = "n";
-      key = "<C-d>";
-      action = "<C-d>zz";
-      options = {
-        desc = "Allow C-d and C-u to keep the cursor in the middle";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<C-u>";
-      action = "<C-u>zz";
-      options = {
-        desc = "Allow C-d and C-u to keep the cursor in the middle";
-      };
-    }
-
-    {
-      mode = "n";
       key = "n";
       action = "nzzzv";
       options = {desc = "Allow search terms to stay in the middle ";};
@@ -377,6 +359,13 @@
       key = "<leader>4";
       action = "<CMD> Grapple select index=4<CR>";
       options = {desc = "Grapple Select 4";};
+    }
+
+    {
+      mode = "n";
+      key = "<esc>";
+      action = "<CMD>nohl<CR>";
+      options = {desc = "Turn off highlighting";};
     }
   ];
   extraConfigLua = ''
