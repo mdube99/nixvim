@@ -10,6 +10,7 @@
         nil_ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
+        ruff = {enable = true;};
         gopls = {enable = true;};
         terraformls = {enable = true;};
         tsserver = {enable = false;};
