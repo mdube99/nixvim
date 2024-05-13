@@ -31,17 +31,18 @@ in {
       lualine_a = [
         {
           name = "mode";
+          separator.left = "";
           #fmt = "string.lower";
-          color = {
-            fg =
-              if config.colorschemes.base16.enable
-              then colors.base04
-              else "none";
-            bg =
-              if config.colorschemes.base16.enable
-              then colors.base00
-              else "none";
-          };
+          # color = {
+          #   fg =
+          #     if config.colorschemes.base16.enable
+          #     then colors.base04
+          #     else "none";
+          #   bg =
+          #     if config.colorschemes.base16.enable
+          #     then colors.base00
+          #     else "none";
+          # };
         }
       ];
       lualine_b = [
