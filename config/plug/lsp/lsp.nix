@@ -49,7 +49,7 @@
             action = "workspace_symbol";
             desc = "Workspace Symbol";
           };
-          "<leader>cr" = {
+          "<leader>rn" = {
             action = "rename";
             desc = "Rename";
           };
