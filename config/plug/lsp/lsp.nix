@@ -6,7 +6,12 @@
       servers = {
         eslint = {enable = true;};
         html = {enable = true;};
-        lua-ls = {enable = true;};
+        lua-ls = {
+          enable = true;
+          settings = {
+            hint = {enable = true;};
+          };
+        };
         nil_ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
@@ -16,6 +21,26 @@
         tsserver = {enable = false;};
         yamlls = {
           enable = true;
+        };
+        rust-analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+          settings = {
+            checkOnSave = true;
+            check = {
+              command = "clippy";
+            };
+            inlayHints = {
+              enable = true;
+              showParameterNames = true;
+              parameterHintsPrefix = "<- ";
+              otherHintsPrefix = "=> ";
+            };
+            procMacro = {
+              enable = true;
+            };
+          };
         };
       };
       keymaps = {
@@ -72,26 +97,42 @@
     };
   };
   extraConfigLua = ''
-    local _border = "rounded"
+       local _border = "rounded"
 
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-      vim.lsp.handlers.hover, {
-        border = _border
-      }
-    )
+       vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+         vim.lsp.handlers.hover, {
+           border = _border
+         }
+       )
 
-    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-      vim.lsp.handlers.signature_help, {
-        border = _border
-      }
-    )
+       vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+         vim.lsp.handlers.signature_help, {
+           border = _border
+         }
+       )
 
-    vim.diagnostic.config{
-      float={border=_border}
-    };
+       vim.diagnostic.config{
+         float={border=_border}
+       };
 
-    require('lspconfig.ui.windows').default_options = {
-      border = _border
-    }
+       require('lspconfig.ui.windows').default_options = {
+         border = _border
+       }
+
+    --- toggle inlay hints
+    vim.g.inlay_hints_visible = true
+    local function toggle_inlay_hints()
+    	if vim.g.inlay_hints_visible then
+    		vim.g.inlay_hints_visible = false
+    		vim.lsp.inlay_hint(bufnr, false)
+    	else
+    		if client.server_capabilities.inlayHintProvider then
+    			vim.g.inlay_hints_visible = true
+    			vim.lsp.inlay_hint(bufnr, true)
+    		else
+    			print("no inlay hints available")
+    		end
+    	end
+    end
   '';
 }

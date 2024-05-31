@@ -299,26 +299,31 @@
     }
   ];
   extraConfigLua = ''
-    function ToggleLineNumber()
-    if vim.wo.number then
-      vim.wo.number = false
-    else
-      vim.wo.number = true
-        vim.wo.relativenumber = false
-        end
-        end
-
-        function ToggleRelativeLineNumber()
-        if vim.wo.relativenumber then
+      function ToggleLineNumber()
+      if vim.wo.number then
+        vim.wo.number = false
+      else
+        vim.wo.number = true
           vim.wo.relativenumber = false
-        else
-          vim.wo.relativenumber = true
-            vim.wo.number = false
-            end
-            end
+          end
+          end
 
-            function ToggleWrap()
-            vim.wo.wrap = not vim.wo.wrap
-            end
+          function ToggleRelativeLineNumber()
+          if vim.wo.relativenumber then
+            vim.wo.relativenumber = false
+          else
+            vim.wo.relativenumber = true
+              vim.wo.number = false
+              end
+              end
+
+              function ToggleWrap()
+              vim.wo.wrap = not vim.wo.wrap
+              end
+
+
+    vim.keymap.set('n', '<leader>lh', function()
+      vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+    end, { desc = '[T]oggle Inlay [H]ints'})
   '';
 }
