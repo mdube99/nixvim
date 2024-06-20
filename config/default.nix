@@ -48,6 +48,7 @@
     ./plug/utils/toggleterm.nix
     ./plug/utils/tmux.nix
     ./plug/utils/surround.nix
+    ./plug/utils/mini.nix
   ];
   options = {
     theme = lib.mkOption {
