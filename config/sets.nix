@@ -6,7 +6,8 @@
       relativenumber = true;
 
       # clipboard
-      clipboard = "unnamedplus";
+      clipboard.register = "unnamedplus";
+      clipboard.providers.wl-copy.enable = true;
 
       # Set tabs to 2 spaces
       tabstop = 4;

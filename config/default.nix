@@ -49,6 +49,7 @@
     ./plug/utils/tmux.nix
     ./plug/utils/surround.nix
     ./plug/utils/mini.nix
+    ./plug/utils/livecommand.nix
   ];
   options = {
     theme = lib.mkOption {
