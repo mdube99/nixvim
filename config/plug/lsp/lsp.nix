@@ -39,26 +39,6 @@
         yamlls = {
           enable = true;
         };
-        rust-analyzer = {
-          enable = true;
-          installCargo = true;
-          installRustc = false;
-          settings = {
-            checkOnSave = true;
-            check = {
-              command = "clippy";
-            };
-            inlayHints = {
-              enable = true;
-              showParameterNames = true;
-              parameterHintsPrefix = "<- ";
-              otherHintsPrefix = "=> ";
-            };
-            procMacro = {
-              enable = true;
-            };
-          };
-        };
       };
       keymaps = {
         silent = true;
