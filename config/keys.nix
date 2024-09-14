@@ -315,6 +315,12 @@
       action = "<CMD>nohl<CR>";
       options = {desc = "Turn off highlighting";};
     }
+    {
+      mode = "n";
+      key = "<leader>bd";
+      action = "<CMD>bd<CR>";
+      options = {desc = "Close buffer";};
+    }
   ];
   extraConfigLua = ''
       function ToggleLineNumber()
