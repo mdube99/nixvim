@@ -35,7 +35,7 @@
     ./plug/treesitter/treesitter-textobjects.nix
     ./plug/treesitter/treesitter.nix
 
-    ./plug/ui/bufferline.nix
+    # ./plug/ui/bufferline.nix
     ./plug/ui/telescope.nix
     ./plug/ui/scroll.nix
 

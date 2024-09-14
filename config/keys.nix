@@ -83,6 +83,24 @@
         desc = "Close tab";
       };
     }
+    {
+      mode = "n";
+      key = "<tab>";
+      action = "<cmd>bn<cr>";
+      options = {
+        silent = true;
+        desc = "Next Buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<S-Tab>";
+      action = "<cmd>bp<cr>";
+      options = {
+        silent = true;
+        desc = "Previous Buffer";
+      };
+    }
 
     # Windows
     {
